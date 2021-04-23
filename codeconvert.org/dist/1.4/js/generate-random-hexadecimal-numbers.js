@@ -1,0 +1,1 @@
+window.bridges["generate-random-hexadecimal-numbers"]=function(){return{converter:function(){for(var n=this.options.get(),r=+n.length,t=+n.count,e="",o=0;o<t;o++){for(var a="",i=0;i<r;i++)a+=parseInt(16*Math.random(),10).toString(16);e+=a,e+="\n"}return e},config:{}}};

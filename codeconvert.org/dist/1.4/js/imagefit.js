@@ -1,0 +1,1 @@
+function best_image_fit(t,e,f,i){if(f<=t){var s=t/f,h=e/i;return h<s?{width:f,height:e/s,offsetX:0,offsetY:(i-e/s)/2,scale:s}:{width:t/h,height:e/h,offsetX:(f-t/h)/2,offsetY:(i-e/h)/2,scale:h}}if(i<e){var o=e/i;return{width:t/o,height:e/o,offsetX:(f-t/o)/2,offsetY:0,scale:o}}return{width:t,height:e,offsetX:(f-t)/2,offsetY:(i-e)/2,scale:1}}

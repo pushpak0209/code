@@ -1,0 +1,1 @@
+window.bridges["generate-random-integers"]=function(){return{converter:function(){for(var n,r,t=this.options.get(),e=+t["range-start"],o=+t["range-end"],a=+t.count,i="",g=0;g<a;g++)i+=(n=e,r=o,Math.floor(Math.random()*(r-n+1))+n),i+="\n";return i},config:{}}};

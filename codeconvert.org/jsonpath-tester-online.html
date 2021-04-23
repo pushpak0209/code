@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from codeconvert.org/jsonpath-tester-online.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Apr 2021 08:03:29 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <title>jsonpath online evaluator - JSONPath Expression Tester - JSONPath Tester</title>
+    <meta http-equiv="content-language" content="en-US">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="description" content="JSONPath Tester is free online tool which helps to test your expressions/quries against an JSON data,JSONPath Tester, file, url" />
+    <meta name="author" content="Jimmy" />
+    <meta name="keywords" content="Json Path,Json Path Tester, json xpath tester , json path expression tester, json path extractor tester, json path query tester, jayway jsonpath tester, Json Path Evaluator,Json Path Tester and Evaluator,Json Path example , how to use json path tester in jmeter , json validator online, json validator schema, Jayway JsonPath evaluator , json test online , JSONPath Tester , Online JSON Query Tester , JSON Path Finder" />
+    <meta property="og:image" content="img/logo.png" />
+    <meta property="og:url" content="jsonpath-tester-online-search-a.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="jsonpath online evaluator - JSONPath Expression Tester - JSONPath Tester" />
+    <meta name="twitter:description" content="JSONPath Tester is free online tool which helps to test your expressions/quries against an JSON data,JSONPath Tester, file, url" />
+    <meta name="twitter:image" content="img/logo.png" />
+    <meta name="twitter:url" content="jsonpath-tester-online-search-a.html">
+    <meta name="twitter:creator" content="@codeconvert">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <link href="img/icon.png" rel="icon" />
+    <link href="dist/1.4/css/formatter-min.css" rel="stylesheet" />
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="6f0289824a5bdfcee70fcf86-text/javascript"></script>
+    <input type="hidden" id="viewName" value="jsonpath-tester">
+    <input type="hidden" id="isLogin" value="">
+    <input type="hidden" id="isFavTool" value="not-fav" />
+<script src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script></head>
+<body id="cbBody">
+    <script type="6f0289824a5bdfcee70fcf86-text/javascript">
+
+        $(document).ready(function(){
+                $("body").addClass("intro");
+            });
+
+    </script> <div id="divheader"></div> <div style="text-align:center;" class="addds">
+                                            <div class='add728'><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6606165541386525" data-ad-slot="8596243617" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    </div> <div id="innerBody" class="innerBody setBgImage">
+        <div class="containe-fluid viewerInnerBodyDiv">
+            <div class="row-fluid back">
+                <div class="span12 viewerInnerBodyDiv1 xpathMainContainer">
+                    <div class="xpathLeftContainer">
+                        <div class="form-wrapper">
+                            <h2>JSON Input</h2> <div class='mainInputSectionDiv'> <span><b>Option 1:</b> </span> <span>Copy-paste your JSON string here</span><span><a class='option-text' href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; getJsonSampleData()" id='sampleDataBtn' title='Load Sample Data' data-cf-modified-6f0289824a5bdfcee70fcf86-=""><b>Sample</b> </a> </span> </div> <textarea rows="" cols="" id="jsonString" name="jsonString"></textarea> <div class='mainInputSectionDiv'> <span><b>Option 2:</b> </span> <span>Or Load your JSON file</span> </div> <div class='permalinkButtonDiv'>
+                                <input type="button" value="Load Url" title="Load From Url" onclick="if (!window.__cfRLUnblockHandlers) return false; loadFromURL('json');" class="btn span4" data-cf-modified-6f0289824a5bdfcee70fcf86-="">
+
+                                <label class="custom-file-upload btn span4">
+                                    <input type="file" value="Open File" id="fileInput" onchange="openFileBGS('fileInput', 'any');" class="upbgs" />
+                                    Browse
+                                </label>
+                                <br>
+                            </div> <div class='mainInputSectionDiv'> <span> <h2>JSON Path Expression</h2> </span> </div> <input type="text" id='jsonpath' name="jsonpath" value="" autocomplete="off"><br /> <div id="buttonDiv" class='actionButton'> <input type="button" value="TEST JSON PATH" onclick="if (!window.__cfRLUnblockHandlers) return false; jsonpath()" class="btn" title="Test the XPath expression" data-cf-modified-6f0289824a5bdfcee70fcf86-=""> <input type="button" value="RESET" class="btn" title="Reset" onclick="if (!window.__cfRLUnblockHandlers) return false; clearall()" data-cf-modified-6f0289824a5bdfcee70fcf86-=""><br /> </div>
+                        </div> <span id="hResult" class='error validatorResultDiv'></span> <a href='#' id='closemsg' class='closemsg'>Close</a>
+                    </div> <div class="span5 mainLeftInputDiv" id="mainLeftDiv"> <div class="span12 mainLeftInputDiv1"> Input <a id="fs" class='fullScreen' href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; fullScreenLeft();" data-cf-modified-6f0289824a5bdfcee70fcf86-="">Full Screen</a> <a id="clearImg" class='clearImage' href="#">Clear</a> </div> <div class="span12 viewerInnerBodyDiv1"> <div id="editor" class='viewerEditor'></div> </div> </div> <div class="span5 mainLeftInputDiv" id="mainRightDiv"> <div class="span12 mainLeftInputDiv1"> <span id="outputMsg">Result</span> <a id="fs1" class='fullScreen' href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; fullScreenRight();" data-cf-modified-6f0289824a5bdfcee70fcf86-="">Full Screen</a> </div> <div class="span12 viewerInnerBodyDiv1 xpathDiv"> <div id="result" class='viewerEditor'></div> <div id="Result1" class='error viewerEditor hide'></div> </div> </div> <div class='xpathMainContainer'> <div class='xpathLeftContainer'> <div class="span12"> <table> <tr> <th>JSONPath</th> <th>Usage</th> </tr> <tr> <td>$</td> <td>the root object/element</td> </tr> <tr> <td>@</td> <td>the current object/element</td> </tr> <tr> <td>. or []</td> <td>child operator</td> </tr> <tr> <td>..</td> <td>recursive descent. JSONPath borrows this syntax from E4X.</td> </tr> <tr> <td>*</td> <td>wildcard. All objects/elements regardless their names.</td> </tr> <tr> <td>[]</td> <td>subscript operator. XPath uses it to iterate over element collections and for predicates. In Javascript and JSON it is the native array operator.</td> </tr> <tr> <td>?()</td> <td>applies a filter (script) expression.</td> </tr> <tr> <td>()</td> <td>script expression, using the underlying script engine.</td> </tr> </table> </div> </div> <div class='xpathLeftContainer' id='testCase1'> <div class="span12"> <h2 class='XpathExampleHead' id="subTitle">JSONPath TEST CASES</h2> </div> <div id='testcase' class="testCase"> <span class='testCaseHead'><b>1. Select the document node</b> </span> <em class='testCaseHeadValue'>$.*</em> <div class='borderbottom'></div> <span class='testCaseHead'><b>2. Select the 'employees' element</b> </span> <em class='testCaseHeadValue'>$.employees</em> <div class='borderbottom'></div> <span class='testCaseHead'><b>3. Select all 'employee' elements that are direct children of the 'employees' element.</b> </span> <em class='testCaseHeadValue'>$.employees.employee</em> <div class='borderbottom'></div> <span class='testCaseHead'><b>4. Select all 'id' elements regardless of their positions in the document.</b> </span> <em class='testCaseHeadValue'>$.employees.employee['*'].id</em> <div class='borderbottom'></div> <span class='testCaseHead'><b>5. Select the 'id' attributes of the 'employee' elements with their positions in the document.</b> </span> <em class='testCaseHeadValue'>$.employees.employee[1].id</em> <div class='borderbottom'></div> </div> </div> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dist/1.4/js/jsonpath.js" type="6f0289824a5bdfcee70fcf86-text/javascript"></script></div> <div style="text-align:center;" class="addds">
+                                                                                                             <div class='add728'><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6606165541386525" data-ad-slot="8596243617" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    </div>
+    <script src="dist/1.4/js/common_load_with_home.js" type="6f0289824a5bdfcee70fcf86-text/javascript"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ace.js" type="6f0289824a5bdfcee70fcf86-text/javascript"></script>
+    <script src="dist/1.4/js/allviewer.js" type="6f0289824a5bdfcee70fcf86-text/javascript"></script>
+    <script src="dist/1.4/js/vkbeautify.js" type="6f0289824a5bdfcee70fcf86-text/javascript"></script>
+    <script type="6f0289824a5bdfcee70fcf86-text/javascript">
+
+        $(document).ready(function() {
+            //called after everything loaded
+            setDefaultData();
+            conditionalCode();
+            $("#me").click();
+        });
+
+    </script> <div id="divFooter"></div>
+    <script src="../ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="6f0289824a5bdfcee70fcf86-|49" defer=""></script>
+</body>
+
+<!-- Mirrored from codeconvert.org/jsonpath-tester-online.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Apr 2021 08:03:32 GMT -->
+</html>

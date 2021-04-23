@@ -1,0 +1,112 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+
+
+<!-- Mirrored from codeconvert.org/file-diff-output-online.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Apr 2021 08:11:09 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <title>File Comparison Tool to Compare files | diffcheker | Text Compare</title>
+    <meta http-equiv="content-language" content="en-US">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link href="img/icon.png" rel="icon" />
+    <meta property="fb:app_id" content="" />
+    <meta property="og:url" content="file-diff-output-online.html" />
+    <meta name="description" content="file compare software - File Difference tool will help you to compare text files, XML, JSON, Code, String, binary files. Upload files, Copy and Paste String/Text, Load Urls and Compare" />
+    <meta name="author" content="Jimmy" />
+    <meta name="Keywords" content="file Diff, diff checker,file comparison tool free, compare files online, text compare,online diff, diff, diff checker, file compare, text diff, file compare tool,compare files online , pdf compare tool , text file compare, world file compare, excel file compare , file compare software,compare html files ,online diff compare, compare js files online , tool to compare two files ,compare files in unix, pdf diff tool , diffcheker , DiffNow , compare word, compare text, compare url " />
+    <meta property="og:image" content="img/cb/filediff.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="File Comparison Tool to Compare files | diffcheker | Text Compare" />
+    <meta name="twitter:description" content="file compare software - File Difference tool will help you to compare text files, XML, JSON, Code, String, binary files. Upload files, Copy and Paste String/Text, Load Urls and Compare" />
+    <meta name="twitter:image" content="img/cb/filediff.png" />
+    <meta name="twitter:url" content="file-diff-output-online.html">
+    <meta name="twitter:creator" content="@codeconvert">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <link href="img/icon.png" rel="icon" />
+    <link rel="stylesheet" href="dist/1.4/css/diffview.css" />
+    <link href="dist/1.4/css/formatter-min.css" rel="stylesheet" />
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="468945e53f71a5bc4ce28e85-text/javascript"></script>
+    <input type="hidden" id="viewName" value="file-difference">
+    <input type="hidden" id="isLogin" value="">
+    <input type="hidden" id="isFavTool" value="not-fav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script></head>
+<body id="cbBody">
+    <div id="divheader"></div>
+    <script type="468945e53f71a5bc4ce28e85-text/javascript">
+
+        $("#savebtn").hide();
+
+    </script>
+    <script src="dist/1.4/js/difflib.js" type="468945e53f71a5bc4ce28e85-text/javascript"></script>
+    <script src="dist/1.4/js/diffview.js" type="468945e53f71a5bc4ce28e85-text/javascript"></script> <div id="innerBody" class="innerBody setBgImage">
+        <div class="container-fluid viewerInnerBodyDiv">
+            <div class="row-fluid">
+                <div class='center'>
+                    <div style="text-align:center;" class="addds">
+                       <div class='add728'><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6606165541386525" data-ad-slot="8596243617" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+                    </div> <div class="span12 fileDiffMainContainer">
+                        <h1 class='fileViewHead'>File Difference</h1> <form name='filediff'>
+                            <div class="span6 original margin0">
+                                <label id="F1x" class="fileup" >
+                                    Choose Your file
+                                    <input type="file" value="Open File" id="F1" onchange="openFileBGS('F1', 'any');" class="upbgs" />
+                                </label> <div id='file1Div'> <textarea class="span12 allNumberConverter" id="file1"></textarea> </div>
+                                <input type='button' id='clear1' class='window_label' value='Reset' onclick="if (!window.__cfRLUnblockHandlers) return false; clear12('file1')" data-cf-modified-468945e53f71a5bc4ce28e85-="">
+                            </div>
+                            <div class="span6 changed">
+                                
+                                <label id="F2x" class="fileup" >
+
+                                    <input type="file" value="Open File" id="F2" onchange="openFileBGS('F2', 'any');" class="upbgs" />
+                                    Choose Your file
+                                </label>
+                                <div id='file2Div'> <textarea class="span12 allNumberConverter" id="file2"></textarea> </div>
+                                <input type='button' id='clear1' class='window_label' value='Reset' onclick="if (!window.__cfRLUnblockHandlers) return false; clear12('file2')" data-cf-modified-468945e53f71a5bc4ce28e85-="">
+                            </div>
+                            <div class='custombtn'> <input id='diff' type="button" value="Difference" onclick="if (!window.__cfRLUnblockHandlers) return false; makeFileDiff()" class="wtd span4" data-cf-modified-468945e53f71a5bc4ce28e85-="" /> <div class="option"> <fieldset> <legend>Option</legend> <input type="checkbox" name='showonlydiff' id='showonlydiff' onclick="if (!window.__cfRLUnblockHandlers) return false; showOnlyDiff()" data-cf-modified-468945e53f71a5bc4ce28e85-="" /><span>Show Only Difference</span> </fieldset> </div> </div>
+                        </form> <div class='diffinfo'> <span class='successmessage'></span> <ul> <li class='replace'>Difference <span id='R'></span> </li> <li class='empty'>Empty <span id='E'></span></li> <li class='insert'>Insert <span id='I'></span></li> <li class='delete'>Delete <span id='D'></span></li> </ul> </div> <div id="showDiff" class="span12 difftable "></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dist/1.4/js/util/makefilediff.js" type="468945e53f71a5bc4ce28e85-text/javascript"></script></div> <div style="text-align:center;" class="addds">
+                                                                                                                      <div class='add728'><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6606165541386525" data-ad-slot="8596243617" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    </div>
+    <script src="dist/1.4/js/common_load_with_home.js" type="468945e53f71a5bc4ce28e85-text/javascript"></script>
+    <script src="dist/1.4/js/allviewer.js" type="468945e53f71a5bc4ce28e85-text/javascript"></script>
+    <script type="468945e53f71a5bc4ce28e85-text/javascript">
+
+        $(document).ready(function() {
+            //called after everything loaded
+            setDefaultData();
+            conditionalCode();
+            $("#me").click();
+        });
+
+    </script> <div id="divFooter"></div>
+    <script src="../ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="468945e53f71a5bc4ce28e85-|49" defer=""></script>
+</body>
+
+<!-- Mirrored from codeconvert.org/file-diff-output-online.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Apr 2021 08:11:11 GMT -->
+</html>

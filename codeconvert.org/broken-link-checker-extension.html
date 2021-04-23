@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+
+<!-- Mirrored from codeconvert.org/broken-link-checker-extension.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Apr 2021 08:07:44 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <title>Free Broken Link Checker - Online Dead Link Checking Tool</title>
+    <meta http-equiv="content-language" content="en-US">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link href="img/icon.png" rel="icon" />
+    <meta property="fb:app_id" content="" />
+    <meta property="og:url" content="broken-link-checker-extension.html" />
+    <meta name="description" content="onilne tool fro Find Broken Link within your site , codeconvert.org broken link checker Tools to Find Broken Links from all pages of website" />
+    <meta name="author" content="Jimmy" />
+    <meta name="Keywords" content="online broken link checker,check broken link from website,website brocken links,broken urls ,Best Online Broken Link Checker & Find Broken Links on website ,url broken link checker, broken url checker, url check broken links ,broken url checker tool , Dead Link Checker , website brocken link check ,brocken link check tool " />
+    <meta property="og:image" content="img/cb/BrokenLinkChecker.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Free Broken Link Checker - Online Dead Link Checking Tool" />
+    <meta name="twitter:description" content="onilne tool fro Find Broken Link within your site , codeconvert.org broken link checker Tools to Find Broken Links from all pages of website" />
+    <meta name="twitter:image" content="img/cb/BrokenLinkChecker.png" />
+    <meta name="twitter:url" content="broken-link-checker-extension.html">
+    <meta name="twitter:creator" content="@codeconvert">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <link href="img/icon.png" rel="icon" />
+    <link href="dist/1.4/css/formatter-min.css" rel="stylesheet" />
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="290d7362a1e34707ebdefc39-text/javascript"></script>
+    <input type="hidden" id="viewName" value="broken-link-checker">
+    <input type="hidden" id="isLogin" value="">
+    <input type="hidden" id="isFavTool" value="not-fav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script></head>
+<body id="cbBody">
+    <div id="divheader"></div>
+    <script type="290d7362a1e34707ebdefc39-text/javascript">
+    </script>
+    <script type="290d7362a1e34707ebdefc39-text/javascript">
+            $().ready(function(e) {
+                $('#check').on('click',function(){
+                    $('#results').html('Please wait while we search...it may take up to 60 seconds to complete your search.');
+                    $.post('google-online.html',{d:$('#domain').val(),k:$('#keywords').val(),c:$('#country').val()},function(data){
+                        $('#results').html(data);
+                    }).fail(function(){
+                        $('#results').html('The server returned an error, please try again later.');
+                    });
+                });
+            });
+
+
+        /** ********************Brocken link checker******************************* */
+        function getLinks() {
+            var path = $("#url").val();
+
+            if (path.length > 5) {
+
+                $("#linksUL").html("");
+
+                $.ajax({
+                    type : "post",
+                    url : globalurl + "service/getAllLinks",
+                    dataType : "json",
+                    data : {
+                        path : path
+                    },
+                    success : function(response) {
+
+                        if (response != null && response.length != 0) {
+                            var arr = path.split("index-2.html");
+
+                            var url = arr[0] + "//" + arr[2];
+
+                            var newLinks = [];
+
+                            $.each(response, function(i, link) {
+
+                                if (isUrl(link)) {
+                                    newLinks.push(link);
+                                } else {
+                                    if (link.indexOf("index-2.html") != 0) {
+                                        link = "/" + link;
+                                    }
+                                    newLinks.push(url + link);
+                                }
+
+                            });
+                            $("#editor").show();
+                            $('.LinkStatusDiv').show();
+                            checkLink(newLinks);
+                        } else {
+                            openErrorDialog("No Links Found Or Not Accessible");
+                        }
+                    },
+                    error : function(e, s, a) {
+                        openErrorDialog("Failed to load data=" + s);
+                    }
+                });
+            }
+        }
+        function isUrl(s) {
+            var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+            return regexp.test(s);
+        }
+
+        $("#url").keydown(function(e) {
+
+            var keycode = e.keyCode || e.which;
+
+            if (keycode == 13) {
+                getLinks();
+            }
+
+        });
+
+        function checkLink(links) {
+            var brokenLinkCnt = 0;
+            var activeLinkCnt = 0;
+            $.each(links, function(i, link) {
+
+                $.ajax({
+                    type : "post",
+                    url : globalurl + "service/check_url",
+                    dataType : "text",
+                    data : {
+                        path : link
+                    },
+                    success : function(response) {
+                        var status = "green";
+
+                        if (response == '308' || response == '404') {
+                            status = "red";
+                            brokenLinkCnt += 1;
+                        }
+                        activeLinkCnt += 1;
+                        $('.activeLink span').html(activeLinkCnt);
+                        $('.brokenLink span').html(brokenLinkCnt);
+                        $('#linksUL').append(
+                                '<li class=' + status + '><a href="' + link + '">' + link + '</a></li>');
+                    },
+                    error : function(e, s, a) {
+                        $('#linksUL').append(
+                                '<li class="red"><a href=' + link + '>' + link	+ '</a></li>');
+                    }
+                });
+            });
+        }
+    </script> <div id="innerBody" class="innerBody setBgImage"> <div class="containe-fluid viewerInnerBodyDiv"> <div class="row-fluid back"> <div class='span12 margin0'> <div class='center'> <div class="span8 centersetting margin"> <h1 class='subTitleHead' id="subTitle">Online Broken Link Checker</h1> </div> <div class="span8 centersetting margin"> <div class='permalinkButtonDiv sourceCodeOptionDiv'> <lable>Enter URL :</lable> <input type="text" placeholder="https://codeconvert.org" id="url" /> <input type="button" value="Check" class="btn allEditorpermalinkButton btn-inverse margin0" onclick="if (!window.__cfRLUnblockHandlers) return false; getLinks()" id='plinkBtn' data-cf-modified-290d7362a1e34707ebdefc39-="" /> </div> <div class='LinkStatusDiv hide'> <p class='activeLink'>Active Links:<span>0</span></p> <p class='brokenLink'>Broken Links:<span>0</span></p> </div> </div> </div> </div> <div class="span12 margin0"> <div class='center'> <div class="span10 centersetting"> <div id="editor" class='onlineEditor link-checker hide'> <ul id="linksUL"></ul> </div> </div> </div> </div> </div> </div> </div></div> <div style="text-align:center;" class="addds">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class='add728'><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6606165541386525" data-ad-slot="8596243617" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    </div>
+    <script src="dist/1.4/js/common_load_with_home.js" type="290d7362a1e34707ebdefc39-text/javascript"></script>
+    <script type="290d7362a1e34707ebdefc39-text/javascript">
+
+        $(document).ready(function() {
+            //called after everything loaded
+            setDefaultData();
+            conditionalCode();
+            $("#me").click();
+        });
+
+    </script> <div id="divFooter"></div>
+    <script src="../ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="290d7362a1e34707ebdefc39-|49" defer=""></script>
+</body>
+
+<!-- Mirrored from codeconvert.org/broken-link-checker-extension.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Apr 2021 08:07:47 GMT -->
+</html>
