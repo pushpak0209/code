@@ -1,1 +1,0 @@
-window.bridges["generate-random-binary-numbers"]=function(){return{converter:function(){for(var n=this.options.get(),r=+n.length,t=+n.count,o="",e=0;e<t;e++){for(var i="",a=0;a<r;a++)i+=parseInt(2*Math.random(),10).toString();o+=i,o+="\n"}return o},config:{}}};

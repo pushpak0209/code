@@ -1,1 +1,0 @@
-window.bridges["generate-random-fractions"]=function(){return{converter:function(){for(var n,r,t=this.options.get(),e=+t["range-start"],o=+t["range-end"],i=+t.count,a="",c=0;c<i;c++)a+=(n=e,r=o,Math.random()*(r-n)+n).toFixed(t.precision),a+="\n";return a},config:{}}};
